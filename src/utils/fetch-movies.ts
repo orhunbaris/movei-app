@@ -25,7 +25,7 @@ export const fetchMovies = async (
   const baseUrl = process.env.REACT_APP_OMDB_BASE_URL;
 
   const url = `${baseUrl}?s=${searchQuery}&page=${page}&type=${type}&y=${releaseYear}&apikey=${apiKey}`;
-
+  console.log("Fetching movies...")
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error('Failed to fetch movies');

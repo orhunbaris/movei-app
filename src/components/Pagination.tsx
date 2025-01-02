@@ -1,20 +1,15 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setCurrentPage } from '../redux/movieSlice';
 
 interface PaginationProps {
-    currentPage: number;
-    totalPages: number;
-    onPageChange: (page: number) => void;
-  }
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
 
-const Pagination: React.FC<PaginationProps> = () => {
-  const dispatch = useDispatch();
-  const { currentPage, totalPages } = useSelector((state: any) => state.movies);
-
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page: number) => {
     if (page > 0 && page <= totalPages) {
-      dispatch(setCurrentPage(page));
+      onPageChange(page);
     }
   };
 
@@ -23,7 +18,7 @@ const Pagination: React.FC<PaginationProps> = () => {
       <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage <= 1}>
         Previous
       </button>
-      <span>{currentPage}</span>
+      <span>{currentPage} / {totalPages}</span>
       <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage >= totalPages}>
         Next
       </button>

@@ -1,18 +1,25 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import MovieCard from './MovieCard';
+import { Link } from 'react-router-dom';
 
-interface MovieGridProps {
-    movies: any
+interface Movie {
+  Title: string;
+  Year: string;
+  imdbID: string;
 }
 
-const MovieGrid: React.FC<MovieGridProps> = () => {
-  const movies = useSelector((state: any) => state.movies.movies);
+interface MovieGridProps {
+  movies: Movie[];
+}
 
+const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
   return (
     <div className="movie-grid">
-      {movies.map((movie: any) => (
-        <MovieCard key={movie.imdbID} movie={movie} />
+      {movies.map((movie) => (
+        <div key={movie.imdbID} className="movie-item">
+          <Link to={`/movie/${movie.imdbID}`}>
+            <h3>{movie.Title} ({movie.Year})</h3>
+          </Link>
+        </div>
       ))}
     </div>
   );
