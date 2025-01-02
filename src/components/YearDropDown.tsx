@@ -7,7 +7,7 @@ interface YearDropdownProps {
 
 const YearDropdown: React.FC<YearDropdownProps> = ({ selectedYear, onYearChange }) => {
   const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: currentYear - 1900 + 1 }, (_, index) => (1900 + index).toString());
+  const years = Array.from({ length: currentYear - 1900 + 1 }, (_, index) => currentYear - index);
 
   return (
     <select value={selectedYear} onChange={(e) => onYearChange(e.target.value)}>

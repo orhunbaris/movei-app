@@ -5,6 +5,7 @@ import { fetchMovies } from '../utils/fetch-movies';
 import MovieGrid from '../components/MovieGrid';
 import Pagination from '../components/Pagination';
 import TypeSelector from '../components/TypeSelector';
+import YearDropdown from '../components/YearDropDown';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
@@ -50,12 +51,7 @@ const Home: React.FC = () => {
         <button onClick={fetchMovieData} disabled={!searchQuery.trim()}>
           Search
         </button>
-        <input
-          type="number"
-          value={releaseYear}
-          onChange={(e) => setReleaseYear(e.target.value)}
-          placeholder="Release Year"
-        />
+        <YearDropdown selectedYear={releaseYear} onYearChange={setReleaseYear} />
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <TypeSelector type={type} onTypeChange={(newType) => setType(newType)} />

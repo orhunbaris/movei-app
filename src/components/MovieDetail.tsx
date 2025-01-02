@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { fetchMovieDetails } from "../utils/fetch-movie-detail";
 
 interface MovieDetailProps {
@@ -19,6 +19,7 @@ interface MovieDetailProps {
 const MovieDetail: React.FC<MovieDetailProps> = () => {
   const { imdbID } = useParams<{ imdbID: string }>();
   const [movie, setMovie] = useState<any | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -41,6 +42,7 @@ const MovieDetail: React.FC<MovieDetailProps> = () => {
       <p>{movie.Actors}</p>
       <p>IMDb Rating: {movie.imdbRating}</p>
       <p>{movie.Plot}</p>
+      <button onClick={() => navigate('/')}>Back to Home</button>
     </div>
   );
 };
