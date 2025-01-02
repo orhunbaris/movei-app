@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieDetails } from '../utils/fetch-movie-detail';
-import MovieDetail from '../components/MovieDetail';
+import MovieDetail from '../components/MovieDetail/MovieDetail';
 
 const MovieDetailPage: React.FC = () => {
   const { imdbID } = useParams<{ imdbID: string }>();

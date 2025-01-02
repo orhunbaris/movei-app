@@ -1,0 +1,16 @@
+.main-content{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 4em;
+    background-color: beige;
+}
+
+.search-section{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
