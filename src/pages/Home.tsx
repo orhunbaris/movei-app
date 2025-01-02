@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('Pokemon');
   const [type, setType] = useState('movie');
   const [releaseYear, setReleaseYear] = useState('');
-  const [error, setError] = useState<string | null>(null); // For error handling
+  const [error, setError] = useState<string | null>(null); 
 
   const fetchMovieData = async () => {
     if (!searchQuery.trim()) {

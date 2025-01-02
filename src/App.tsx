@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
 import store from "./redux/store";
 
+
 const App = () => {
   return (
     <Provider store={store}>

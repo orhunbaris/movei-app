@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/MovieGrid.scss";
 
 interface Movie {
   Title: string;
@@ -17,7 +18,9 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
       {movies.map((movie) => (
         <div key={movie.imdbID} className="movie-item">
           <Link to={`/movie/${movie.imdbID}`}>
-            <h3>{movie.Title} ({movie.Year})</h3>
+            <h3>
+              {movie.Title} ({movie.Year})
+            </h3>
           </Link>
         </div>
       ))}

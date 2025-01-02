@@ -9,7 +9,7 @@ const MovieDetailPage: React.FC = () => {
 
   useEffect(() => {
     const fetchDetail = async () => {
-      const data = await fetchMovieDetails(imdbID!); // Fetch movie detail by IMDb ID
+      const data = await fetchMovieDetails(imdbID!);
       setMovie(data);
     };
 
