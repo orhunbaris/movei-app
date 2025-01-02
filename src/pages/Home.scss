@@ -3,14 +3,15 @@
     height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     padding: 5px;
     gap: 4em;
-    background-color: beige;
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 .search-section{
+    margin-top: 4em;
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 25px;
 }

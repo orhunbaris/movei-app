@@ -54,13 +54,13 @@ const Home: React.FC = () => {
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search Movies"
         />
-        <button onClick={fetchMovieData} disabled={!searchQuery.trim()}>
-          Search
-        </button>
           <YearDropdown
             selectedYear={releaseYear}
             onYearChange={setReleaseYear}
           />
+        <button onClick={fetchMovieData} disabled={!searchQuery.trim()}>
+          Search
+        </button>
       </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <TypeSelector type={type} onTypeChange={(newType) => setType(newType)} />
