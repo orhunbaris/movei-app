@@ -21,12 +21,19 @@ interface MovieDetail {
   
     const url = `${baseUrl}?i=${movieId}&apikey=${apiKey}`;
   
+    // Log the URL to check
+    console.log("Fetching movie details from:", url);
+  
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error('Failed to fetch movie details');
     }
   
     const data = await response.json();
+  
+    // Log the response to check
+    console.log("Response data:", data);
+  
     if (data.Response === 'False') {
       throw new Error(data.Error || 'Movie not found');
     }
