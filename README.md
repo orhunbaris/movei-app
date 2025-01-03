@@ -35,9 +35,6 @@ The app supports filters such as movie type (movie, series, episode), and releas
 3. **Movie/TV Details**:
     - Each result has a detailed page with information such as title, genre, director, actors, IMDb rating, plot, and runtime.
 
-4. **Responsive Design**:
-    - The app is fully responsive and adjusts to different screen sizes, providing a smooth user experience.
-
 ## Installation
 
 To run this project locally, follow these steps:
