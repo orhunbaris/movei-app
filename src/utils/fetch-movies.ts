@@ -1,8 +1,3 @@
-import axios from 'axios';
-
-const apiKey = process.env.REACT_APP_OMDB_API_KEY || ''
-const baseUrl= process.env.REACT_APP_OMDB_BASE_URL || ''
-
 interface Movie {
   imdbID: string;
   Title: string;
