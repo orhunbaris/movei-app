@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setSearchQuery } from '../../redux/movieSlice'; 
+import { setSearchQuery } from '../../redux/movieSlice';
+import './SearchBar.scss' 
 
 const SearchBar: React.FC = () => {
   const dispatch = useDispatch();

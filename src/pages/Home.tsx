@@ -7,6 +7,7 @@ import Pagination from "../components/Pagination/Pagination";
 import TypeSelector from "../components/TypeSelector/TypeSelector";
 import YearDropdown from "../components/YearDropDown/YearDropDown";
 import "./Home.scss";
+import SearchBar from "../components/SearchBar/SearchBar";
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
@@ -48,12 +49,7 @@ const Home: React.FC = () => {
   return (
     <div className="main-content">
       <div className="search-section">
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search Movies"
-        />
+        <SearchBar />
           <YearDropdown
             selectedYear={releaseYear}
             onYearChange={setReleaseYear}
