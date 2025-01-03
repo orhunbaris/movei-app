@@ -16,7 +16,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const posterUrl =
     movie.Poster && movie.Poster !== 'N/A'
       ? movie.Poster
-      : '/path-to-placeholder.jpg'; // Fallback image
+      : 'https://via.placeholder.com/300x450?text=No+Image'; 
 
   const handleCardClick = () => {
     navigate(`/details/${movie.imdbID}`);
