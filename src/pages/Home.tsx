@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           Search
         </button>
       </div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
       <TypeSelector type={type} onTypeChange={(newType) => setType(newType)} />
       <MovieGrid movies={movies} />
       <Pagination

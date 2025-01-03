@@ -21,7 +21,6 @@ interface MovieDetail {
   
     const url = `${baseUrl}?i=${movieId}&apikey=${apiKey}`;
   
-    // Log the URL to check
     console.log("Fetching movie details from:", url);
   
     const response = await fetch(url);
@@ -31,7 +30,6 @@ interface MovieDetail {
   
     const data = await response.json();
   
-    // Log the response to check
     console.log("Response data:", data);
   
     if (data.Response === 'False') {
