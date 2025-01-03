@@ -19,7 +19,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
     <div className="movie-grid">
       {movies.map((movie) => (
         <div key={movie.imdbID} className="movie-item">
-
+            <Link to={`/movie/${movie.imdbID}`}>
             <MovieCard
               movie={{
                 imdbID: movie.imdbID,
@@ -28,6 +28,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
                 Poster: movie.Poster
               }}
             />
+            </Link>
         </div>
       ))}
     </div>

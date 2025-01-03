@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchMovieDetails } from "../../utils/fetch-movie-detail";
+import "./MovieDetail.scss";
 
 interface MovieDetailProps {
   movie: {
@@ -33,16 +34,22 @@ const MovieDetail: React.FC<MovieDetailProps> = () => {
 
   return (
     <div className="movie-detail">
-      <img src={movie.Poster} alt={movie.Title} />
-      <h1>{movie.Title}</h1>
-      <p>{movie.Year}</p>
-      <p>{movie.Runtime}</p>
-      <p>{movie.Genre}</p>
-      <p>{movie.Director}</p>
-      <p>{movie.Actors}</p>
-      <p>IMDb Rating: {movie.imdbRating}</p>
-      <p>{movie.Plot}</p>
-      <button onClick={() => navigate('/')}>Back to Home</button>
+      <div className="movie-detail-header">
+        <img src={movie.Poster} alt={movie.Title} />
+        <div className="text-section">
+          <h1>{movie.Title}</h1>
+          <p>{movie.Year}</p>
+          <p>{movie.Runtime}</p>
+          <p>{movie.Genre}</p>
+          <p>{movie.Director}</p>
+          <p>{movie.Actors}</p>
+          <p>IMDb Rating: {movie.imdbRating}</p>
+          <p>{movie.Plot}</p>
+        </div>
+      </div>
+      <button className="back-to-home" onClick={() => navigate("/")}>
+        Back to Home
+      </button>
     </div>
   );
 };
