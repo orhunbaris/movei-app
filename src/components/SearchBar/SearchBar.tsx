@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setSearchQuery } from '../../redux/movieSlice';
-import './SearchBar.scss' 
+import React from 'react';
+import './SearchBar.scss';
 
-const SearchBar: React.FC = () => {
-  const dispatch = useDispatch();
-  const [searchQuery, setSearchQueryInput] = useState('');
+interface SearchBarProps {
+  searchQuery: string;
+  setSearchQuery: (value: string) => void;
+}
 
+const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery }) => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQueryInput(e.target.value);
-    dispatch(setSearchQuery(e.target.value));
+    setSearchQuery(e.target.value);
   };
 
   return (

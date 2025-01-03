@@ -26,7 +26,7 @@ const Home: React.FC = () => {
     }
 
     try {
-      setError(null); // Reset error when search starts
+      setError(null); 
       const data = await fetchMovies(
         searchQuery,
         currentPage,
@@ -49,12 +49,16 @@ const Home: React.FC = () => {
   return (
     <div className="main-content">
       <div className="search-section">
-        <SearchBar />
-          <YearDropdown
-            selectedYear={releaseYear}
-            onYearChange={setReleaseYear}
-          />
-        <button onClick={fetchMovieData} disabled={!searchQuery.trim()}>
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+        <YearDropdown
+          selectedYear={releaseYear}
+          onYearChange={setReleaseYear}
+        />
+        <button
+          className="search-button"
+          onClick={fetchMovieData}
+          disabled={!searchQuery.trim()}
+        >
           Search
         </button>
       </div>
