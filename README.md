@@ -83,10 +83,3 @@ The project follows a modular folder structure for better maintainability and re
 4. Commit your changes (`git commit -am 'Add new feature'`).
 5. Push to the branch (`git push origin feature-name`).
 6. Create a new pull request.
-
-## Acknowledgments
-
-- [OMDb API](http://www.omdbapi.com/) for providing the movie and TV data.
-- [React](https://reactjs.org/) for making web development easier.
-- [Redux](https://redux.js.org/) for state management.
-- [TypeScript](https://www.typescriptlang.org/) for adding type safety to JavaScript.
