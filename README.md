@@ -44,7 +44,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/movie-app.git
+   git clone https://github.com/orhunbaris/movie-app.git
    cd movie-app
    ```
 
@@ -86,10 +86,6 @@ The project follows a modular folder structure for better maintainability and re
 4. Commit your changes (`git commit -am 'Add new feature'`).
 5. Push to the branch (`git push origin feature-name`).
 6. Create a new pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
