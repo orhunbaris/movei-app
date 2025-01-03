@@ -44,7 +44,7 @@ const Home: React.FC = () => {
     if (searchQuery.trim() !== "") {
       fetchMovieData();
     }
-  }, [currentPage, type, releaseYear]);
+  }, [currentPage]);
 
   return (
     <div className="main-content">

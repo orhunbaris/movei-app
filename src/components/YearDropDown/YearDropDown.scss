@@ -1,0 +1,27 @@
+.year-dropdown{
+    font-size: 1rem;
+    padding: 8px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  
+    &:focus {
+      background-color: white;
+      outline: none;
+      border-color: #333;
+    }
+  
+    option {
+      background-color: #333;
+      color: pink;
+    }
+  
+    &.active {
+      background-color: #333;
+      opacity: 0.7;
+      color: black;
+    }
+  }
+  
