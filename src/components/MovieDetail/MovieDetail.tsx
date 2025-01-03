@@ -38,18 +38,18 @@ const MovieDetail: React.FC<MovieDetailProps> = () => {
         <img src={movie.Poster} alt={movie.Title} />
         <div className="text-section">
           <h1>{movie.Title}</h1>
-          <p>{movie.Year}</p>
-          <p>{movie.Runtime}</p>
-          <p>{movie.Genre}</p>
-          <p>{movie.Director}</p>
-          <p>{movie.Actors}</p>
+          <p>ReleaseYear: {movie.Year}</p>
+          <p>Duration: {movie.Runtime}</p>
+          <p>Genre: {movie.Genre}</p>
+          <p>Director: {movie.Director}</p>
+          <p>Actors: {movie.Actors}</p>
           <p>IMDb Rating: {movie.imdbRating}</p>
           <p>{movie.Plot}</p>
+          <button className="back-to-home" onClick={() => navigate("/")}>
+            Back to Home
+          </button>
         </div>
       </div>
-      <button className="back-to-home" onClick={() => navigate("/")}>
-        Back to Home
-      </button>
     </div>
   );
 };
